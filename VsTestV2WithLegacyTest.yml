@@ -24,5 +24,9 @@ jobs:
   - task: VSTest@2
     inputs:
       testSelector: 'testAssemblies'
+      testAssemblyVer2: '*.dll'
+      runSettingsFile: 'legacy.runsettings'
+      searchFolder: '$(Agent.BuildDirectory)\LegacyTestMix'
+
 
         
