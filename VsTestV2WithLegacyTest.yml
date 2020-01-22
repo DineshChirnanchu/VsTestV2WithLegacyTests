@@ -27,6 +27,7 @@ jobs:
       testAssemblyVer2: '**/*.dll'
       runSettingsFile: 'legacy.runsettings'
       searchFolder: '$(Agent.BuildDirectory)'
+      vsTestVersion: 'toolsInstaller'
 
 
         
