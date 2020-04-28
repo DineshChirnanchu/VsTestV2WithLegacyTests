@@ -1,7 +1,5 @@
 # The objective is to perform VSTESTV2 with Legacy Tests
 
-trigger:
-- master
 jobs:
 - job: RunTest1
   displayName: 'Run Tests'
@@ -14,7 +12,8 @@ jobs:
   - task: VSTest@2
     inputs:
       testSelector: 'testAssemblies'
-      testAssemblyVer2: '**/*.dll'
+      testAssemblyVer2: '**\*.dll'
+      searchFolder: '$(System.DefaultWorkingDirectory)\'
       runSettingsFile: 'legacy.runsettings'
       searchFolder: '$(Agent.BuildDirectory)'
       vsTestVersion: 'toolsInstaller'
