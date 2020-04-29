@@ -12,7 +12,7 @@ jobs:
   - task: VSTest@2
     inputs:
       testSelector: 'testAssemblies'
-      testAssemblyVer2: '**\*.dll'
+      testAssemblyVer2: '**/*.dll'
       searchFolder: '$(System.DefaultWorkingDirectory)\'
       runSettingsFile: 'legacy.runsettings'
       searchFolder: '$(Agent.BuildDirectory)'
